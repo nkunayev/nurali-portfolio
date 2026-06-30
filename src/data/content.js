@@ -13,7 +13,7 @@ export const profile = {
   tagline:
     "Computer Science graduate building software, AI-powered tools, data-driven applications, and interactive experiences.",
   email: "nuralikunayev@gmail.com",
-  resumeUrl: "/resume.pdf",
+  resumeUrl: `${import.meta.env.BASE_URL}resume.pdf`,
   github: "https://github.com/nkunayev",
   linkedin: "https://www.linkedin.com/in/nurali-kunayev/",
 };

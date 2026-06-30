@@ -1,0 +1,5 @@
+Replace this file with your real resume named "resume.pdf".
+
+The "Resume" buttons across the site link to /resume.pdf, so as long as your
+PDF lives here in /public with that exact name, it will be served correctly
+on both GitHub Pages and Vercel.

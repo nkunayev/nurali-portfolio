@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-slate-950 text-slate-400 font-sans antialiased;
+    /* Subtle ambient gradient that sits behind everything. */
+    background-image: radial-gradient(
+      60rem 60rem at 80% -10%,
+      rgba(45, 212, 191, 0.06),
+      transparent 60%
+    );
+    background-attachment: fixed;
+  }
+
+  ::selection {
+    @apply bg-teal-400/20 text-teal-200;
+  }
+}
+
+@layer utilities {
+  /* Thin custom scrollbar to match the dark theme. */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-slate-950;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-slate-800 rounded-full;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-slate-700;
+  }
+}
+
+/* Respect users who prefer reduced motion. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
